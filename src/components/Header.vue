@@ -5,13 +5,13 @@
       <nav class="links" :class="{ active: isActive }">
         <ul>
           <li>
-            <a href="">Home</a>
+            <a href="#">Home</a>
           </li>
           <li>
-            <a href="">About Me</a>
+            <a href="#">About Me</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="#">Contact</a>
           </li>
         </ul>
       </nav>
@@ -82,12 +82,13 @@ export default {
       @media (max-width: 450px) {
         position: fixed;
         top: 0;
-        left: -70%;
-        width: 70%;
+        left: -80%;
+        width: 80%;
         height: 100%;
         background-color: #2a323d;
         transition: 0.3s left ease-in-out;
         padding: 40px 0;
+        z-index: 99999;
         &.active {
           left: 0;
         }

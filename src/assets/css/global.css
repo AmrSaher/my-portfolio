@@ -55,3 +55,24 @@ body {
   }
 }
 /* End Container */
+
+/* Components */
+.section {
+  width: 100%;
+  padding: 30px 0;
+}
+.btn {
+  border: none;
+  padding: 10px 25px;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.btn.btn-main {
+  background-color: var(--main-color);
+}
+.btn.btn-dark {
+  background-color: var(--btn-color);
+}
+/* End Components */
