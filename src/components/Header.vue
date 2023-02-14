@@ -11,6 +11,9 @@
             <a href="#about-me-section">About Me</a>
           </li>
           <li>
+            <a href="#works">My Works</a>
+          </li>
+          <li>
             <a href="#">Contact</a>
           </li>
         </ul>
