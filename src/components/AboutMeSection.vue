@@ -51,7 +51,7 @@ export default {
         font-weight: 400;
         opacity: 0.8;
         a {
-          color: #fff;
+          color: var(--main-color);
           opacity: 1;
           font-weight: 500;
           cursor: pointer;

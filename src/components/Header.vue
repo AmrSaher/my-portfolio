@@ -16,6 +16,10 @@
           <li>
             <a href="#">Contact</a>
           </li>
+          <li class="theme-toggle">
+            <input type="checkbox" id="toggle" v-model="isDark" />
+            <label for="toggle"></label>
+          </li>
         </ul>
       </nav>
       <button class="toggle" @click="isActive = !isActive">
@@ -31,8 +35,25 @@ export default {
   data() {
     return {
       isActive: false,
+      isDark: true
     };
   },
+  watch: {
+    isDark(v) {
+      let theme = v ? 'dark' : 'light';
+      document.body.className = theme;
+      localStorage.setItem('theme', theme);
+    }
+  },
+  created() {
+    let theme = localStorage.getItem('theme');
+
+    if (theme) {
+      this.isDark = theme == 'dark' ? true : false;
+    } else {
+      localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+    }
+  }
 };
 </script>
 
@@ -59,26 +80,65 @@ export default {
         display: flex;
         align-items: center;
         gap: 20px;
-        a {
-          color: var(--text-color);
-          font-size: 0.9rem;
-          font-weight: 400;
-          opacity: 0.9;
-          position: relative;
-          &::before {
-            content: "";
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            background-color: var(--text-color);
+        li {
+          a {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-weight: 400;
             opacity: 0.9;
-            height: 1px;
-            border-radius: 5px;
-            transition: 0.3s width ease-in-out;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              width: 0;
+              background-color: var(--text-color);
+              opacity: 0.9;
+              height: 1px;
+              border-radius: 5px;
+              transition: 0.3s width ease-in-out;
+            }
+            &:hover::before {
+              width: 100%;
+            }
           }
-          &:hover::before {
-            width: 100%;
+          &.theme-toggle {
+            input[type="checkbox"] {
+              visibility: hidden;
+              display: none;
+              &:checked + label {
+                transform: rotate(360deg);
+                &:before {
+                  transform: translateX(22.5px);
+                  background-color: #fff;
+                }
+              }
+            }
+            label {
+              display: flex;
+              width: 45px;
+              height: 22.5px;
+              border: 2px solid;
+              border-radius: 99em;
+              position: relative;
+              transition: transform 0.75s ease-in-out;
+              transform-origin: 50% 50%;
+              cursor: pointer;
+              &:before {
+                transition: transform 0.75s ease;
+                transition-delay: 0.5s;
+                content: "";
+                display: block;
+                position: absolute;
+                width: 13.5px;
+                height: 13.5px;
+                background-color: #000;
+                border-radius: 50%;
+                top: 3px;
+                left: 3px;
+              }
+            }
           }
         }
         @media (max-width: 450px) {
@@ -93,7 +153,7 @@ export default {
         left: -80%;
         width: 80%;
         height: 100%;
-        background-color: #2a323d;
+        background-color: var(--btn-color);
         transition: 0.3s left ease-in-out;
         padding: 40px 0;
         z-index: 99999;

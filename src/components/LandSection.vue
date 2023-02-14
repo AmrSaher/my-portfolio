@@ -52,6 +52,9 @@ export default {
         @media (max-width: 992px) {
           font-size: 3rem;
         }
+        @media (max-width: 768px) {
+            font-size: 3.5rem;
+        }
       }
       .btns {
         display: flex;
@@ -90,11 +93,13 @@ export default {
         &:active {
           opacity: 1;
         }
-        @media (max-width: 770px) {
-          margin-top: 15%;
-        }
         @media (max-width: 500px) {
           margin-top: 30%;
+        }
+        @media (max-width: 768px) {
+            margin-top: 15%;
+            width: 70px;
+            height: 70px;
         }
       }
       @media (max-width: 768px) {
