@@ -5,10 +5,10 @@
       <nav class="links" :class="{ active: isActive }">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="#land-section">Home</a>
           </li>
           <li>
-            <a href="#">About Me</a>
+            <a href="#about-me-section">About Me</a>
           </li>
           <li>
             <a href="#">Contact</a>
@@ -35,9 +35,14 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 80px;
   border-bottom: 1px solid var(--hr-color);
+  z-index: 999;
+  background-color: var(--bg-color);
   .container {
     display: flex;
     justify-content: space-between;

@@ -1,5 +1,5 @@
 <template>
-    <section class="section land">
+    <section class="section land" id="land-section">
         <div class="container">
             <div class="text">
                 <h2>FULL STACK<br>
@@ -10,11 +10,11 @@
                     <button class="btn btn-dark">Download CV <i class="bi bi-download"></i></button>
                 </div>
                 <img src="@/assets/imgs/arrow-1.png" alt="arrow" class="arrow">
-                <button class="arrow-down">
+                <a href="#about-me-section" class="arrow-down">
                     <i class="bi bi-arrow-down"></i>
-                </button>
+                </a>
             </div>
-            <div class="img">
+            <div class="img-container">
                 <img src="@/assets/imgs/bg-1.png" alt="background" class="bg">
                 <img src="@/assets/imgs/person-1.png" alt="person" class="person">
             </div>
@@ -74,15 +74,31 @@ export default {
                 color: var(--text-color);
                 margin: auto;
                 margin-top: 30%;
+                transition: 0.3s opacity ease-in-out;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 i {
                     font-size: 1.4rem;
+                }
+                &:hover {
+                    opacity: 0.8;
+                }
+                &:active {
+                    opacity: 1;
+                }
+                @media (max-width: 770px) {
+                    margin-top: 15%;
+                }
+                @media (max-width: 500px) {
+                    margin-top: 30%;
                 }
             }
             @media (max-width: 768px) {
                 width: 100%;
             }
         }
-        .img {
+        .img-container {
             position: relative;
             width: 50%;
             height: 100%;
@@ -116,8 +132,8 @@ export default {
     }
     @media (max-width: 768px) {
         background-image: url(../assets/imgs/bg-1.png);
-        background-position: 100px;
-        background-size: 200%;
+        background-position: 130px;
+        background-size: 150%;
         background-repeat: no-repeat;
     }
 }
