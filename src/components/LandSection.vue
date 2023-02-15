@@ -53,7 +53,7 @@ export default {
           font-size: 3rem;
         }
         @media (max-width: 768px) {
-            font-size: 3.5rem;
+          font-size: 3.5rem;
         }
       }
       .btns {
@@ -97,9 +97,9 @@ export default {
           margin-top: 30%;
         }
         @media (max-width: 768px) {
-            margin-top: 15%;
-            width: 70px;
-            height: 70px;
+          margin-top: 15%;
+          width: 70px;
+          height: 70px;
         }
       }
       @media (max-width: 768px) {

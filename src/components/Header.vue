@@ -11,10 +11,10 @@
             <a href="#about-me-section">About Me</a>
           </li>
           <li>
-            <a href="#works">My Works</a>
+            <a href="#works-section">My Works</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#contact-section">Contact</a>
           </li>
           <li class="theme-toggle">
             <input type="checkbox" id="toggle" v-model="isDark" />
@@ -35,25 +35,25 @@ export default {
   data() {
     return {
       isActive: false,
-      isDark: true
+      isDark: true,
     };
   },
   watch: {
     isDark(v) {
-      let theme = v ? 'dark' : 'light';
+      let theme = v ? "dark" : "light";
       document.body.className = theme;
-      localStorage.setItem('theme', theme);
-    }
+      localStorage.setItem("theme", theme);
+    },
   },
   created() {
-    let theme = localStorage.getItem('theme');
+    let theme = localStorage.getItem("theme");
 
     if (theme) {
-      this.isDark = theme == 'dark' ? true : false;
+      this.isDark = theme == "dark" ? true : false;
     } else {
-      localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+      localStorage.setItem("theme", this.isDark ? "dark" : "light");
     }
-  }
+  },
 };
 </script>
 
