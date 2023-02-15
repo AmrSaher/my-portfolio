@@ -9,8 +9,8 @@
         </div>
       </div>
       <div class="right">
-        <img src="@/assets/imgs/keyboard.png" alt="keyboard" class="keyboard">
-        <img src="@/assets/imgs/mail.png" alt="main" class="mail">
+        <img src="@/assets/imgs/keyboard.png" alt="keyboard" class="keyboard" />
+        <img src="@/assets/imgs/mail.png" alt="main" class="mail" />
         <form>
           <h2>Got a project in <span>mind?</span></h2>
           <div class="top">
@@ -54,16 +54,18 @@
 </template>
 
 <script>
-import AOS from 'aos';
+import AOS from "aos";
 
 export default {
   name: "ContactSection",
+  computed: {
+    aosOptions() {
+      return this.$store.getters.aosOptions;
+    },
+  },
   mounted() {
-    AOS.init({
-        delay: 400,
-      duration: 1200,
-    })
-  }
+    AOS.init(this.aosOptions);
+  },
 };
 </script>
 
@@ -103,7 +105,7 @@ export default {
       }
     }
     .right {
-        position: relative;
+      position: relative;
       height: 100%;
       width: 50%;
       display: flex;
@@ -113,7 +115,7 @@ export default {
       .mail {
         position: absolute;
         @media (max-width: 628px) {
-            display: none;
+          display: none;
         }
       }
       .keyboard {
@@ -128,7 +130,7 @@ export default {
       }
       h2 {
         @media (min-width: 992px) {
-            display: none;
+          display: none;
         }
       }
       form {

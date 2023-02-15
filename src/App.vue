@@ -23,7 +23,7 @@ export default {
     AboutMeSection,
     WorksSection,
     ContactSection,
-    Footer
+    Footer,
   },
 };
 </script>

@@ -26,16 +26,18 @@
 </template>
 
 <script>
-import AOS from 'aos';
+import AOS from "aos";
 
 export default {
   name: "LandSection",
+  computed: {
+    aosOptions() {
+      return this.$store.getters.aosOptions;
+    },
+  },
   mounted() {
-    AOS.init({
-        delay: 400,
-      duration: 1200,
-    })
-  }
+    AOS.init(this.aosOptions);
+  },
 };
 </script>
 
