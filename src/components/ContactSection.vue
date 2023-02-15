@@ -9,6 +9,8 @@
         </div>
       </div>
       <div class="right">
+        <img src="@/assets/imgs/keyboard.png" alt="keyboard" class="keyboard">
+        <img src="@/assets/imgs/mail.png" alt="main" class="mail">
         <form>
           <h2>Got a project in <span>mind?</span></h2>
           <div class="top">
@@ -93,11 +95,34 @@ export default {
       }
     }
     .right {
+        position: relative;
       height: 100%;
       width: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
+      .keyboard,
+      .mail {
+        position: absolute;
+        @media (max-width: 628px) {
+            display: none;
+        }
+      }
+      .keyboard {
+        left: 50px;
+        top: 0;
+        width: 120px;
+      }
+      .mail {
+        right: 50px;
+        bottom: 50px;
+        width: 70px;
+      }
+      h2 {
+        @media (min-width: 992px) {
+            display: none;
+        }
+      }
       form {
         width: 100%;
         display: flex;

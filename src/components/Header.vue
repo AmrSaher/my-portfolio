@@ -141,13 +141,13 @@ export default {
             }
           }
         }
-        @media (max-width: 450px) {
+        @media (max-width: 600px) {
           width: 100%;
           flex-direction: column;
           justify-content: center;
         }
       }
-      @media (max-width: 450px) {
+      @media (max-width: 600px) {
         position: fixed;
         top: 0;
         left: -80%;
@@ -171,7 +171,7 @@ export default {
         font-size: 1.5rem;
         color: var(--text-color);
       }
-      @media (max-width: 450px) {
+      @media (max-width: 600px) {
         display: block;
       }
     }
