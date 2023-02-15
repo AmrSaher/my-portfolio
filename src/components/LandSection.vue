@@ -2,11 +2,11 @@
   <section class="section land" id="land-section">
     <div class="container">
       <div class="text">
-        <h2>
+        <h2 data-aos="fade-right">
           FULL STACK<br />
           <span>DEVELOPER</span>
         </h2>
-        <div class="btns">
+        <div class="btns" data-aos="fade-up">
           <button class="btn btn-main">Hire me</button>
           <button class="btn btn-dark">
             Download CV <i class="bi bi-download"></i>
@@ -17,7 +17,7 @@
           <i class="bi bi-arrow-down"></i>
         </a>
       </div>
-      <div class="img-container">
+      <div class="img-container" data-aos="fade-left">
         <img src="@/assets/imgs/bg-1.png" alt="background" class="bg" />
         <img src="@/assets/imgs/person-1.png" alt="person" class="person" />
       </div>
@@ -26,8 +26,16 @@
 </template>
 
 <script>
+import AOS from 'aos';
+
 export default {
   name: "LandSection",
+  mounted() {
+    AOS.init({
+        delay: 400,
+      duration: 1200,
+    })
+  }
 };
 </script>
 

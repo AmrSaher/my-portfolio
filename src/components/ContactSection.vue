@@ -2,8 +2,8 @@
   <section class="section contact" id="contact-section">
     <div class="container">
       <div class="left">
-        <h2>Got a project in <br /><span>mind?</span></h2>
-        <div class="img-container">
+        <h2 data-aos="fade-right">Got a project in <br /><span>mind?</span></h2>
+        <div class="img-container" data-aos="fade-up">
           <img src="@/assets/imgs/arrow-3.png" alt="arrow" class="arrow" />
           <img src="@/assets/imgs/person-3.png" alt="person" class="person" />
         </div>
@@ -14,7 +14,7 @@
         <form>
           <h2>Got a project in <span>mind?</span></h2>
           <div class="top">
-            <div class="field">
+            <div class="field" data-aos="fade-down">
               <label for="name">Your name</label>
               <input
                 type="text"
@@ -24,7 +24,7 @@
                 required
               />
             </div>
-            <div class="field">
+            <div class="field" data-aos="fade-up">
               <label for="email">Your email</label>
               <input
                 type="email"
@@ -35,7 +35,7 @@
               />
             </div>
           </div>
-          <div class="field">
+          <div class="field" data-aos="fade-up">
             <label for="message">Your message</label>
             <textarea
               class="inp"
@@ -44,7 +44,7 @@
               placeholder="Message"
             ></textarea>
           </div>
-          <button type="submit" class="btn btn-main">
+          <button type="submit" class="btn btn-main" data-aos="fade-right">
             Send Message <i class="bi bi-send"></i>
           </button>
         </form>
@@ -54,8 +54,16 @@
 </template>
 
 <script>
+import AOS from 'aos';
+
 export default {
   name: "ContactSection",
+  mounted() {
+    AOS.init({
+        delay: 400,
+      duration: 1200,
+    })
+  }
 };
 </script>
 

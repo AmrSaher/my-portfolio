@@ -1,7 +1,7 @@
 <template>
   <section class="section works" id="works-section">
     <div class="container">
-      <h2>My recent <span>works</span></h2>
+      <h2 data-aos="fade-right">My recent <span>works</span></h2>
       <ul class="cats">
         <li>All</li>
         <li>Front-End</li>
@@ -11,13 +11,13 @@
         <li>PHP</li>
       </ul>
       <div class="cards">
-        <a href="#" class="card">
+        <a href="#" class="card" data-aos="fade-up">
           <img src="@/assets/imgs/project-1.png" alt="project image" />
         </a>
-        <a href="#" class="card">
+        <a href="#" class="card" data-aos="fade-down">
           <img src="@/assets/imgs/project-1.png" alt="project image" />
         </a>
-        <a href="#" class="card">
+        <a href="#" class="card" data-aos="fade-left">
           <img src="@/assets/imgs/project-1.png" alt="project image" />
         </a>
       </div>
@@ -26,8 +26,16 @@
 </template>
 
 <script>
+import AOS from 'aos';
+
 export default {
   name: "WorksSection",
+  mounted() {
+    AOS.init({
+        delay: 400,
+      duration: 1200,
+    })
+  }
 };
 </script>
 

@@ -2,8 +2,8 @@
   <section class="section about_me" id="about-me-section">
     <div class="container">
       <div class="text">
-        <h2>About <span>me</span></h2>
-        <p>
+        <h2 data-aos="zoom-in">About <span>me</span></h2>
+        <p data-aos="fade-up">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat at ab
           in nam sequi, vel provident id. Veritatis deserunt, odit dignissimos
           temporibus assumenda minima, itaque suscipit fuga possimus mollitia
@@ -13,7 +13,7 @@
         <img src="@/assets/imgs/music.png" alt="music" class="music" />
         <img src="@/assets/imgs/arrow-2.png" alt="arrow" class="arrow" />
       </div>
-      <div class="img-container">
+      <div class="img-container" data-aos="fade-down">
         <img src="@/assets/imgs/bg-2.png" alt="background" class="bg" />
         <img src="@/assets/imgs/person-2.png" alt="person" class="person" />
       </div>
@@ -22,8 +22,16 @@
 </template>
 
 <script>
+import AOS from 'aos';
+
 export default {
   name: "AboutMeSection",
+  mounted() {
+    AOS.init({
+        delay: 400,
+      duration: 1200,
+    })
+  }
 };
 </script>
 
