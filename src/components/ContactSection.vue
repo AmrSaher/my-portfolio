@@ -11,7 +11,7 @@
       <div class="right">
         <img src="@/assets/imgs/keyboard.png" alt="keyboard" class="keyboard" />
         <img src="@/assets/imgs/mail.png" alt="main" class="mail" />
-        <form>
+        <form @submit.prevent="handleSubmit">
           <h2>Got a project in <span>mind?</span></h2>
           <div class="top">
             <div class="field" data-aos="fade-down">
@@ -22,6 +22,7 @@
                 class="inp"
                 placeholder="Name"
                 required
+                v-model="name"
               />
             </div>
             <div class="field" data-aos="fade-up">
@@ -32,6 +33,7 @@
                 class="inp"
                 placeholder="Email"
                 required
+                v-model="email"
               />
             </div>
           </div>
@@ -42,6 +44,7 @@
               required
               id="message"
               placeholder="Message"
+              v-model="message"
             ></textarea>
           </div>
           <button type="submit" class="btn btn-main" data-aos="fade-right">
@@ -54,8 +57,42 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "ContactSection",
+  data() {
+    return {
+      name: "",
+      email: "",
+      message: "",
+      api: "https://formspree.io/f/mjvdwbey",
+    };
+  },
+  methods: {
+    async handleSubmit() {
+      await axios
+        .post(
+          this.api,
+          {
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          },
+          {
+            Accept: "application/json",
+          }
+        )
+        .then((res) => {
+          this.$swal.fire({
+            title: "Good job!",
+            text: "Message sent!",
+            icon: "success",
+            theme: "dark",
+          });
+        });
+    },
+  },
 };
 </script>
 
