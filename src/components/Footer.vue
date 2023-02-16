@@ -26,16 +26,26 @@
       <nav class="social-media">
         <ul>
           <li>
-            <a href=""><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.tiktok.com/@code_collective" target="_blank"
+              ><i class="bi bi-tiktok"></i
+            ></a>
           </li>
           <li>
-            <a href=""><i class="bi bi-youtube"></i></a>
+            <a
+              href="https://www.youtube.com/channel/UCRFYcQN8vY-aUb5loPo2eHw"
+              target="_blank"
+              ><i class="bi bi-youtube"></i
+            ></a>
           </li>
           <li>
-            <a href=""><i class="bi bi-github"></i></a>
+            <a href="https://github.com/AmrSaher" target="_blank"
+              ><i class="bi bi-github"></i
+            ></a>
           </li>
           <li>
-            <a href=""><i class="bi bi-whatsapp"></i></a>
+            <a href="tel:01558373138" target="_blank"
+              ><i class="bi bi-telephone"></i
+            ></a>
           </li>
         </ul>
       </nav>

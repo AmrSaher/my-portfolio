@@ -4,10 +4,10 @@
       <div class="text">
         <h2 data-aos="zoom-in">About <span>me</span></h2>
         <p data-aos="fade-up">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat at ab
-          in nam sequi, vel provident id. Veritatis deserunt, odit dignissimos
-          temporibus assumenda minima, itaque suscipit fuga possimus mollitia
-          laborum... <a>Read more</a>
+          {{ readMore ? aboutMe1 + aboutMe2 : aboutMe1
+          }}<a @click="readMore = !readMore"
+            >Read {{ readMore ? "less" : "more" }}</a
+          >
         </p>
         <img src="@/assets/imgs/light.png" alt="light" class="light" />
         <img src="@/assets/imgs/music.png" alt="music" class="music" />
@@ -22,17 +22,14 @@
 </template>
 
 <script>
-import AOS from "aos";
-
 export default {
   name: "AboutMeSection",
-  computed: {
-    aosOptions() {
-      return this.$store.getters.aosOptions;
-    },
-  },
-  mounted() {
-    AOS.init(this.aosOptions);
+  data() {
+    return {
+      readMore: false,
+      aboutMe1: `My name is Amr Saher, and I am a 16-year-old programmer who started learning how to code when I was 11. Since then, I have been continuously learning several programming languages, such as Python, PHP, JavaScript, MySQL, HTML, CSS, Sass, Vue.js, Laravel, Django, PyQt5, and more. `,
+      aboutMe2: `I have been working as a full-stack web developer for about two years, and I'm always eager to learn and improve my skills in order to become a successful programmer in the future. `,
+    };
   },
 };
 </script>

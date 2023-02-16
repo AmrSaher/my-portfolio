@@ -14,6 +14,8 @@ import AboutMeSection from "@/components/AboutMeSection.vue";
 import WorksSection from "@/components/WorksSection.vue";
 import ContactSection from "@/components/ContactSection.vue";
 import Footer from "@/components/Footer.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default {
   name: "App",
@@ -24,6 +26,14 @@ export default {
     WorksSection,
     ContactSection,
     Footer,
+  },
+  computed: {
+    aosOptions() {
+      return this.$store.getters.aosOptions;
+    },
+  },
+  mounted() {
+    AOS.init(this.aosOptions);
   },
 };
 </script>

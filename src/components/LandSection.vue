@@ -7,10 +7,10 @@
           <span>DEVELOPER</span>
         </h2>
         <div class="btns" data-aos="fade-up">
-          <button class="btn btn-main">Hire me</button>
-          <button class="btn btn-dark">
+          <a class="btn btn-main" href="#contact-section">Hire me</a>
+          <a class="btn btn-dark">
             Download CV <i class="bi bi-download"></i>
-          </button>
+          </a>
         </div>
         <img src="@/assets/imgs/arrow-1.png" alt="arrow" class="arrow" />
         <a href="#about-me-section" class="arrow-down">
@@ -26,18 +26,8 @@
 </template>
 
 <script>
-import AOS from "aos";
-
 export default {
   name: "LandSection",
-  computed: {
-    aosOptions() {
-      return this.$store.getters.aosOptions;
-    },
-  },
-  mounted() {
-    AOS.init(this.aosOptions);
-  },
 };
 </script>
 
@@ -70,6 +60,9 @@ export default {
         display: flex;
         align-items: center;
         gap: 20px;
+        .btn {
+          font-size: 15px;
+        }
       }
       .arrow {
         position: absolute;

@@ -3,22 +3,21 @@
     <div class="container">
       <h2 data-aos="fade-right">My recent <span>works</span></h2>
       <ul class="cats">
-        <li>All</li>
-        <li>Front-End</li>
-        <li>Back-End</li>
-        <li>Laravel</li>
-        <li>Vue js</li>
-        <li>PHP</li>
+        <li
+          v-for="(cat, i) in categories"
+          v-text="cat"
+          @click="category = cat"
+        ></li>
       </ul>
       <div class="cards">
-        <a href="#" class="card" data-aos="fade-up">
-          <img src="@/assets/imgs/project-1.png" alt="project image" />
-        </a>
-        <a href="#" class="card" data-aos="fade-down">
-          <img src="@/assets/imgs/project-1.png" alt="project image" />
-        </a>
-        <a href="#" class="card" data-aos="fade-left">
-          <img src="@/assets/imgs/project-1.png" alt="project image" />
+        <a
+          :href="project.link"
+          class="card"
+          :data-aos="project.animation"
+          v-for="(project, i) in projects"
+          :key="i"
+        >
+          <img :src="project.img" alt="project image" />
         </a>
       </div>
     </div>
@@ -26,17 +25,44 @@
 </template>
 
 <script>
-import AOS from "aos";
-
 export default {
   name: "WorksSection",
-  computed: {
-    aosOptions() {
-      return this.$store.getters.aosOptions;
-    },
+  data() {
+    return {
+      category: "All",
+      categories: ["All", "HTML & CSS", "Vue.js", "PHP", "Laravel"],
+      works: [
+        {
+          img: "https://raw.githubusercontent.com/AmrSaher/glass-app/main/website.png",
+          link: "https://github.com/AmrSaher/glass-app",
+          animation: "fade-left",
+          cats: ["HTML & CSS", "Vue.js"],
+        },
+        {
+          img: "https://raw.githubusercontent.com/AmrSaher/image-editor/master/website.png",
+          link: "https://github.com/AmrSaher/image-editor",
+          animation: "fade-up",
+          cats: ["HTML & CSS", "Vue.js"],
+        },
+        {
+          img: "https://raw.githubusercontent.com/AmrSaher/iphone-x/master/website.png",
+          link: "https://github.com/AmrSaher/iphone-x",
+          animation: "fade-right",
+          cats: ["HTML & CSS", "Vue.js"],
+        },
+      ],
+    };
   },
-  mounted() {
-    AOS.init(this.aosOptions);
+  computed: {
+    projects() {
+      if (this.category == "All") {
+        return this.works;
+      } else {
+        return this.works.filter((work) => {
+          if (work.cats.includes(this.category)) return true;
+        });
+      }
+    },
   },
 };
 </script>
@@ -76,9 +102,8 @@ export default {
     }
     .cards {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       flex-wrap: wrap;
       .card {
@@ -87,9 +112,16 @@ export default {
         background-color: var(--btn-color);
         opacity: 0.8;
         padding: 30px 10px;
+        width: 100%;
         img {
           width: 100%;
         }
+      }
+      @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
       }
     }
   }

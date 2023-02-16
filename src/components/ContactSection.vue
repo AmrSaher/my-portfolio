@@ -54,18 +54,8 @@
 </template>
 
 <script>
-import AOS from "aos";
-
 export default {
   name: "ContactSection",
-  computed: {
-    aosOptions() {
-      return this.$store.getters.aosOptions;
-    },
-  },
-  mounted() {
-    AOS.init(this.aosOptions);
-  },
 };
 </script>
 
