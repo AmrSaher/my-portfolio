@@ -84,6 +84,9 @@ export default {
           }
         )
         .then((res) => {
+          this.name = "";
+          this.email = "";
+          this.message = "";
           this.$swal.fire({
             title: "Good job!",
             text: "Message sent!",
