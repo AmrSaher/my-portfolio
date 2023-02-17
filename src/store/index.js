@@ -5,7 +5,6 @@ export default createStore({
     aosOptions: {
       duration: 1200,
       delay: 400,
-      disable: "mobile",
     },
   },
   getters: {
