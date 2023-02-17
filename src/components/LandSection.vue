@@ -8,7 +8,7 @@
         </h2>
         <div class="btns" data-aos="fade-up">
           <a class="btn btn-main" href="#contact-section">Hire me</a>
-          <a class="btn btn-dark">
+          <a class="btn btn-dark" href="/cv.pdf" download="cv">
             Download CV <i class="bi bi-download"></i>
           </a>
         </div>
