@@ -119,18 +119,16 @@ export default {
       .bg {
         position: absolute;
         z-index: -1;
+        top: 50%;
+        transform: translateY(-50%);
         right: 0;
-        bottom: 0;
         @media (max-width: 992px) {
           width: 100%;
-          top: 50%;
-          transform: translateY(-50%);
-          right: 0;
         }
       }
       .person {
         position: absolute;
-        bottom: 0;
+        bottom: 8%;
         @media (max-width: 992px) {
           width: 80%;
           top: 30%;

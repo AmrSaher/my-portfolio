@@ -108,9 +108,9 @@ export default {
       }
       .person {
         position: absolute;
-        bottom: 50px;
+        top: 60%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         @media (max-width: 992px) {
           width: 350px;
         }
