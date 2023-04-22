@@ -2,7 +2,7 @@
   <section class="section about_me" id="about-me-section">
     <div class="container">
       <div class="text">
-        <h2 data-aos="zoom-in">About zz<span>me</span></h2>
+        <h2 data-aos="zoom-in">About <span>me</span></h2>
         <p data-aos="fade-up">
           {{ readMore ? aboutMe1 + aboutMe2 : aboutMe1
           }}<a @click="readMore = !readMore"
