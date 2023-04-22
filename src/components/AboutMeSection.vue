@@ -27,8 +27,8 @@ export default {
   data() {
     return {
       readMore: false,
-      aboutMe1: `My name is Amr Saher, and I am a 16-year-old programmer who started learning how to code when I was 11. Since then, I have been continuously learning several programming languages, such as Python, PHP, JavaScript, MySQL, HTML, CSS, Sass, Vue.js, Laravel, Django, PyQt5, and more. `,
-      aboutMe2: `I have been working as a full-stack web developer for about two years, and I'm always eager to learn and improve my skills in order to become a successful programmer in the future. `,
+      aboutMe1: `Hello, my name is Amr Saher and I am a 16-year-old software developer with a passion for programming. I started learning programming at the age of 12 and since then I have gained extensive experience in various programming languages such as HTML, CSS, JavaScript, Vue.js, Nuxt.js, `,
+      aboutMe2: `PHP, MySQL, Laravel, Python, Django, PyQt5, and more. Currently, I am learning C# and ASP.net and plan to learn TypeScript in the near future. Apart from programming, I am also interested in fitness and spend time in the gym regularly. When I am not coding or working out, I enjoy playing video games. With my dedication and passion for software development, I am excited to take on new challenges and grow as a developer. `,
     };
   },
 };
