@@ -4,7 +4,7 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .UIContainer {
     @media (min-width: 768px){
         width: 750px;
