@@ -3,16 +3,17 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  css: [
-    '~/assets/css/main.css',
-  ],
+  app: {
+    head: {
+      title: "Amr Saher",
+    },
+  },
+  css: ["~/assets/css/main.css"],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-  modules: [
-    '@pinia/nuxt',
-  ],
-})
+  modules: ["@pinia/nuxt"],
+});
