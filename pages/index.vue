@@ -3,5 +3,6 @@
     <HeroSection />
     <AboutSection />
     <SkillsSection />
+    <ExperienceSection />
   </div>
 </template>
