@@ -1,9 +1,11 @@
 <template>
   <section
-    class="HeroSection min-h-[500px] overflow-hidden relative max-sm:min-h-[450px]"
+    class="HeroSection min-h-[550px] overflow-hidden relative max-sm:min-h-[450px]"
   >
     <HeroSectionGlowing />
-    <div class="absolute top-[60%] -translate-y-1/2 w-full text-center z-20">
+    <div
+      class="absolute top-[50%] -translate-y-1/2 w-full text-center z-20 max-sm:top-[60%]"
+    >
       <h1
         class="text-7xl flex flex-col items-center gap-3 mb-5 max-sm:text-4xl"
       >
