@@ -1,5 +1,7 @@
 <template>
-  <li class="flex items-start justify-between max-sm:flex-col max-sm:gap-2">
+  <li
+    class="ExperienceSectionItem flex items-start justify-between max-sm:flex-col max-sm:gap-2"
+  >
     <span class="w-[15%] text-[#bbbbbb] font-light text-nowrap"
       >{{ job.from }} - {{ job.to }}</span
     >
@@ -11,6 +13,7 @@
           v-for="(skill, n) in job.skills"
           :key="n"
           :text="skill"
+          :is-colored="true"
         />
       </ul>
     </div>

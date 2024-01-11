@@ -1,5 +1,5 @@
 <template>
-  <MainSection title="Experience">
+  <MainSection class="ExperienceSection" title="Experience">
     <ul class="flex flex-col gap-5">
       <ExperienceSectionItem v-for="(job, n) in jobs" :key="n" :job="job" />
     </ul>

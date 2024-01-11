@@ -1,5 +1,5 @@
 <template>
-  <MainSection title="About" id="about">
+  <MainSection class="AboutSection" title="About" id="about">
     <p class="text-[#bbbbbb] tracking-wider font-light">
       Hi, I am Amr Saher, I am a software engineer, and I have 3 years
       experience in this field, Focused on Nuxt.js, PHP, Laravel. Lately I am

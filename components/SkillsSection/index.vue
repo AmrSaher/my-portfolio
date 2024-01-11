@@ -1,5 +1,5 @@
 <template>
-  <MainSection title="Skills">
+  <MainSection class="SkillsSection" title="Skills">
     <ul class="flex gap-2 flex-wrap items-center w-full">
       <SkillsSectionItem v-for="(skill, n) in skills" :key="n" :text="skill" />
     </ul>

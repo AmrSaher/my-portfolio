@@ -1,6 +1,6 @@
 <template>
   <article
-    class="bg-[#1c1c1c] rounded-md flex flex-col items-center gap-5 p-5 border border-[#2d2d2d] cursor-pointer hover:border-[#4c4c4c] transition-colors"
+    class="ProjectsSectionItem bg-[#1c1c1c] rounded-md flex flex-col items-center gap-5 p-5 border border-[#2d2d2d] cursor-pointer hover:border-[#4c4c4c] transition-colors"
   >
     <div class="w-full flex items-center justify-end gap-5">
       <a

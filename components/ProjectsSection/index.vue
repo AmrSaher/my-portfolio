@@ -1,5 +1,5 @@
 <template>
-  <MainSection title="Projects">
+  <MainSection class="ProjectsSection" title="Projects">
     <div class="grid grid-cols-2 gap-3 max-sm:grid-cols-1">
       <ProjectsSectionItem
         v-for="(project, n) in projects"
