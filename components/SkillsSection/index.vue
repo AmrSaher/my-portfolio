@@ -29,5 +29,7 @@ const skills = ref([
   "Nuxt.js",
   "Vuex",
   "Pinia",
+  "Git",
+  "Github",
 ]);
 </script>

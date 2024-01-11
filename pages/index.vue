@@ -6,5 +6,6 @@
     <ExperienceSection />
     <ProjectsSection />
     <Footer />
+    <ChatBot />
   </div>
 </template>

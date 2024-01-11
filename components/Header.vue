@@ -1,6 +1,6 @@
 <template>
   <header
-    class="Header fixed top-8 left-[50%] -translate-x-1/2 px-3 h-[60px] rounded-[2rem] flex items-center text-[#ffffffe5] z-50 transition-[background]"
+    class="Header fixed top-8 left-[50%] -translate-x-1/2 px-3 h-[60px] rounded-[2rem] flex items-center text-[#ffffffe5] z-30 transition-[background]"
     :class="{
       'border border-[#404040b5] bg-[#72727233] backdrop-blur-sm': showBg,
     }"
