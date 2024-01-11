@@ -1,26 +1,26 @@
 <template>
-  <div class="glowing" v-for="i in [1, 2, 3, 4]" :key="i">
-    <span v-for="i in [1, 2, 3]" :key="i" :style="`--i: ${i}`"></span>
+  <div
+    class="HeroSectionGlowing relative max-w-[700px] h-[100px] m-auto origin-right even:origin-left"
+    v-for="i in [1, 2, 3, 4]"
+    :key="i"
+  >
+    <span
+      v-for="i in [1, 2, 3]"
+      :key="i"
+      :class="`
+        absolute top-[${80 * i}px] bottom-[${80 * i}px] right-[${
+        80 * i
+      }px] left-[${80 * i}px]
+      `"
+      :style="`--i: ${i}`"
+    ></span>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.glowing {
-  position: relative;
-  max-width: 700px;
-  height: 100px;
-  margin: auto;
-  transform-origin: right;
+.HeroSectionGlowing {
   animation: colorChange 5s linear infinite;
-  &:nth-child(even) {
-    transform-origin: left;
-  }
   span {
-    position: absolute;
-    top: calc(80px * var(--i));
-    left: calc(80px * var(--i));
-    bottom: calc(80px * var(--i));
-    right: calc(80px * var(--i));
     &::before {
       content: "";
       position: absolute;

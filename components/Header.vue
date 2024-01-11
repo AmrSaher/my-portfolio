@@ -15,10 +15,10 @@
           <a href="#" @click="navigate(1)">Home</a>
         </li>
         <li class="w-[100px] h-[40px] flex items-center justify-center">
-          <a href="#" @click="navigate(2)">About</a>
+          <a href="#about" @click="navigate(2)">About</a>
         </li>
         <li class="w-[100px] h-[40px] flex items-center justify-center">
-          <a href="#" @click="navigate(3)">Services</a>
+          <a href="#services" @click="navigate(3)">Services</a>
         </li>
       </ul>
     </nav>
