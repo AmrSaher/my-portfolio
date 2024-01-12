@@ -1,15 +1,13 @@
 <template>
   <div
-    class="ChatBotChatBox fixed bottom-7 right-7 max-sm:bottom-0 max-sm:right-0 w-[400px] h-[600px] max-sm:w-full max-sm:h-full bg-[#4f4f4f33] transition-all rounded-lg z-30 border border-[#434343] duration-500 backdrop-blur-sm"
-    :class="{
-      'w-0 h-0 border-0 max-sm:w-0 max-sm:h-0 overflow-hidden': !isOpened,
-    }"
+    class="ChatBotChatBox overflow-hidden fixed bottom-7 right-7 max-sm:bottom-0 max-sm:right-0 w-[400px] h-[600px] max-sm:w-full max-sm:h-full bg-[#4f4f4f33] transition-all rounded-lg z-30 border border-[#434343] duration-500 backdrop-blur-sm"
+    :style="!isOpened ? 'width: 0; height: 0; border: 0;' : ''"
   >
     <header
       class="absolute top-0 left-0 w-full px-3 h-[80px] flex items-center justify-between bg-[#0e949e] rounded-tl-lg rounded-tr-lg"
     >
       <div>
-        <h3 class="font-medium">Amr Saher Bot</h3>
+        <h3 class="font-medium">Amr Saher Bot 👾</h3>
         <p class="font-light text-sm tracking-wider">Ask me any thing</p>
       </div>
       <button
@@ -50,9 +48,3 @@ const emit = defineEmits(["close"]);
 
 const close = () => emit("close");
 </script>
-
-<style>
-.as {
-  color: #2b9ea7;
-}
-</style>
