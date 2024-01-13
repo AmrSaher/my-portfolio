@@ -1,5 +1,5 @@
 <template>
-  <MainSection class="SkillsSection" title="Skills">
+  <MainSection class="SkillsSection" title="Skills" id="skills">
     <ul class="flex gap-2 flex-wrap items-center w-full">
       <SkillsSectionItem v-for="(skill, n) in skills" :key="n" :text="skill" />
     </ul>
@@ -31,5 +31,8 @@ const skills = ref([
   "Pinia",
   "Git",
   "Github",
+  "Python",
+  "Django",
+  "PyQt5",
 ]);
 </script>

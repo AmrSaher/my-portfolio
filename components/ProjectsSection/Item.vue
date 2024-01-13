@@ -6,12 +6,15 @@
       <a
         :href="project.github"
         class="text-[#bbbbbb] hover:text-[#ededed] transition-colors"
+        target="_blank"
       >
         <Icon class="text-2xl" name="uil:github" />
       </a>
       <a
+        v-if="project.url"
         :href="project.url"
         class="text-[#bbbbbb] hover:text-[#ededed] transition-colors"
+        target="_blank"
       >
         <Icon class="text-2xl" name="uil:link" />
       </a>

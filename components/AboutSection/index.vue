@@ -1,10 +1,29 @@
 <template>
   <MainSection class="AboutSection" title="About" id="about">
     <p class="text-[#bbbbbb] tracking-wider font-light">
-      Hi, I am Amr Saher, I am a software engineer, and I have 3 years
-      experience in this field, Focused on Nuxt.js, PHP, Laravel. Lately I am
-      focusing on learning C# and .NET Framework. And in this 3 years I have
-      built a lot of projects you can see on my github profile.
+      I'm Amr Saher, a 17-year-old .NET Developer from Egypt with 3 years of
+      experience in FullStack Development. Crafting innovative projects since
+      childhood, I'm now a driven developer seeking a challenging internship to
+      further contribute to the evolving tech landscape. Let's shape the future
+      together. Check my social media
+      <a
+        href="https://github.com/AmrSaher"
+        target="_blank"
+        class="text-[#5fe9d6]"
+        >Github</a
+      >,
+      <a
+        href="https://www.instagram.com/amrsaher56/"
+        target="_blank"
+        class="text-[#5fe9d6]"
+        >Instagram</a
+      >,
+      <a
+        href="https://www.linkedin.com/in/amr-saher-a9003b230/"
+        target="_blank"
+        class="text-[#5fe9d6]"
+        >Linkedin</a
+      >
     </p>
   </MainSection>
 </template>

@@ -4,7 +4,7 @@
   >
     <HeroSectionGlowing />
     <div
-      class="absolute top-[50%] -translate-y-1/2 w-full text-center z-20 max-sm:top-[60%]"
+      class="absolute top-[50%] -translate-y-1/2 w-full flex flex-col items-center text-center z-20 max-sm:top-[60%]"
     >
       <h1
         class="text-7xl flex flex-col items-center gap-3 mb-5 max-sm:text-4xl"
@@ -13,10 +13,11 @@
         <span class="position">A .NET Developer.</span>
       </h1>
       <p
-        class="text-lg font-light text-[#bbbbbb] tracking-wider max-sm:text-base px-4"
+        class="text-lg font-light text-[#bbbbbb] tracking-wider max-w-[750px] max-sm:text-base px-4"
       >
-        I'm passionate about creating experiences that are easy to use,
-        accessible, and that meet the user's needs.
+        Passionate software engineer dedicated to crafting elegant and efficient
+        solutions that transcend code, turning complex challenges into seamless
+        experiences.
       </p>
     </div>
     <div

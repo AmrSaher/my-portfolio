@@ -1,5 +1,5 @@
 <template>
-  <MainSection class="ExperienceSection" title="Experience">
+  <MainSection class="ExperienceSection" title="Experience" id="experience">
     <ul class="flex flex-col gap-5">
       <ExperienceSectionItem v-for="(job, n) in jobs" :key="n" :job="job" />
     </ul>
@@ -9,13 +9,13 @@
 <script setup>
 const jobs = ref([
   {
-    from: "Sep 2023",
-    to: "Jun 2024",
-    position: "Backend Developer",
+    from: "May 2021",
+    to: "Aug 2021",
+    position: "Backend Developer - Internship",
     companyName: "Twision",
     description:
-      "Working on chatbot solutions, our goal is to drive global digital transformation. In my role, I focus on developing intuitive user interfaces and backend APIs. We leverage AI technologies, including ChatGPT, to support city digitization initiatives and enhance public service delivery.",
-    skills: ["PHP", "Laravel", "MySql", "Backend"],
+      "As a Backend Developer at Twision, I played a key role in enhancing our clients' digital presence. I focused on designing and implementing robust backend systems, collaborating with frontend developers, and contributing to strategic marketing plans. My work ensured seamless web development and solidified Twision's reputation as an innovative digital marketing agency.",
+    skills: ["PHP", "Laravel", "MySql", "Backend", "Apache"],
   },
 ]);
 </script>

@@ -9,7 +9,8 @@
       <ul class="flex items-center gap-3">
         <li>
           <a
-            href=""
+            target="_blank"
+            href="https://www.linkedin.com/in/amr-saher-a9003b230/"
             class="text-[#bbbbbb] hover:text-[#5fe9d6] transition-colors"
           >
             <Icon class="text-2xl" name="uil:linkedin" />
@@ -17,7 +18,8 @@
         </li>
         <li>
           <a
-            href=""
+            target="_blank"
+            href="https://www.instagram.com/amrsaher56/"
             class="text-[#bbbbbb] hover:text-[#5fe9d6] transition-colors"
           >
             <Icon class="text-2xl" name="uil:instagram" />
@@ -25,7 +27,8 @@
         </li>
         <li>
           <a
-            href=""
+            target="_blank"
+            href="https://github.com/AmrSaher"
             class="text-[#bbbbbb] hover:text-[#5fe9d6] transition-colors"
           >
             <Icon class="text-2xl" name="uil:github" />
