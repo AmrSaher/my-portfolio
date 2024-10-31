@@ -121,7 +121,7 @@ const sendMessage = async () => {
 }
 const askAI = async () => {
   isGenerating.value = true
-  const { data } = await useFetch(LLM_API_URL, {
+  const { data } = await fetch(LLM_API_URL, {
     method: 'post',
     watch: false,
     body: {
