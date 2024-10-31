@@ -23,7 +23,7 @@
         target="_blank"
         class="text-[#5fe9d6]"
         >Linkedin</a
-      >
+      >.
     </p>
   </MainSection>
 </template>
